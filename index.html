@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<head><script>src="js/FileSaver.js"</script> </head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crear código para eventos</title>
+</head>
 <html>
 <body>
 
-<h2>JavaScript Test</h2>
+<h2>Introduce los datos y haz clic en el botón para ver el código</h2>
 
-Value Text: <input type="text" id="caja1" >
-Value Text: <input type="text" id="caja2" >
-Value Text: <input type="text" id="caja3" >
+Nombre del archivo de imagen: <input type="text" id="caja1" >
+Nombre del grupo: <input type="text" id="caja2" >
+Grupo y día: <input type="text" id="caja3" >
+Lugar y hora: <input type="text" id="caja3" >
 
 <button type="button" onclick="showc()">Guardar</button>
 
@@ -22,12 +27,12 @@ Value Text: <input type="text" id="caja3" >
 	
 	var texto1=document.getElementById('caja1').value;
 	var texto2=document.getElementById('caja2').value;
-	var texto3=document.getElementById('caja3').value+"\n";
+	var texto2=document.getElementById('caja2').value;
+	var texto3=document.getElementById('caja4').value+"\n";
 	
-	
-	
+		
 	var t1= document.createTextNode("<li class=\"item "+texto1+"style=\"position: absolute; left: px; top: 0px;\"> <a href=\"images/work/");
-	var t2= document.createTextNode(texto2+" ");
+	var t2= document.createTextNode(texto1+"\" class=\"fancybox\"> <img src=\"images/work/"+texto1);
 	var t3= document.createTextNode(texto3);
 	var br = document.createElement("br");
 
