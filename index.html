@@ -8,17 +8,22 @@
 <body>
 
 <h2>Introduce los datos y haz clic en el botón para ver el código</h2>
-<div>
-    <label for="Categoría">Categoría</label>
-    <input type="text" id="caja1" >
-</div>
-
-Nombre del archivo de imagen: <input type="text" id="caja2" ><br>
-Nombre del grupo: <input type="text" id="caja3" ><br>
-Grupo y día: <input type="text" id="caja4" ><br>
-Lugar y hora: <input type="text" id="caja5" >
-
+<style type="text/css" media="screen">
+	form  { display: table;      }
+	p     { display: table-row;  }
+	label { display: table-cell; }
+	input { display: table-cell; }
+</style>
+<form>
+<p><label for="caja1">Categoría:</label><input type="text" id="caja1" ></p>
+<p><label for="caja2">Nombre del archivo de imagen:</label><input type="text" id="caja2" ></p>
+<p><label for="caja3">Nombre del grupo:</label><input type="text" id="caja3" ></p>
+<p><label for="caja4">Grupo y día:</label><input type="text" id="caja4" ></p>
+<p><label for="caja5">Lugar y hora:</label><input type="text" id="caja5" ></p>
+</form>
 <button type="button" onclick="showc()">Crear código</button>
+<br>
+<br>
 
   
 <script>
@@ -38,13 +43,9 @@ Lugar y hora: <input type="text" id="caja5" >
 		
 	var t1= document.createTextNode("<li class=\"item "+texto1+" style=\"position: absolute; left: px; top: 0px;\"> <a href=\"images/work/"+texto2+"\" class=\"fancybox\"> <img src=\"images/work/"+texto2);
 	var t2= document.createTextNode("\" alt=\"\"><div class=\"overlay\"> <span>"+texto3+"</span> </div></a><h3>"+texto4+"</h3><p>"+texto5+"</p></li>");	
-	//var t3= document.createTextNode(texto3);
 	var br = document.createElement("br");
-
-
 	codigo.appendChild(t1);
 	codigo.appendChild(t2);
-	//codigo.appendChild(t3);
 	codigo.appendChild(br)	
 	
 	document.getElementById('caja1').value='';
@@ -53,17 +54,7 @@ Lugar y hora: <input type="text" id="caja5" >
 	document.getElementById('caja4').value='';
 	document.getElementById('caja5').value='';
 	document.getElementById("caja1").focus();
-/*	
-<li class="item	folk	" style="position: absolute; left: px; top: 0px;"> <a href="images/work/	5.jpg" class="fancybox"> <img src="images/work/	5.jpg	" alt=""><div class="overlay"> <span>	Las Violinstas. La leyenda. Martes 25	</span> </div></a><h3>	Las Violinistas. Martes 25 	</h3><p>		En la leyenda</p></li>
-<li class="item opera" style="position: absolute; left: 877px; top: 219px;"> <a href="images/work/7.jpg" class="fancybox"> <img src="images/work/7.jpg" alt=""><div class="overlay"> <span>Etiam consequat</span> </div></a><h3>Esto es</h3><p>una prueba</p></li>
-<li class="item pop" style="position: absolute; left: 877px; top: 219px;"> <a href="images/work/8.jpg" class="fancybox"> <img src="images/work/8.jpg" alt=""><div class="overlay"> <span>Ahora sólo falta</span> </div></a><h3>Que me pongas</h3><p>los textos</p></li>
-<li class="item melodico" style="position: absolute; left: 877px; top: 219px;"> <a href="images/work/9.jpg" class="fancybox"> <img src="images/work/9.jpg" alt=""><div class="overlay"> <span>Ahora sólo falta</span> </div></a><h3>Que me pongas</h3><p>los textos</p></li>
-<li class="item otros" style="position: absolute; left: 877px; top: 219px;"> <a href="images/work/10.jpg" class="fancybox"> <img src="images/work/10.jpg" alt=""><div class="overlay"> <span>Ahora sólo falta</span> </div></a><h3>Que me pongas</h3><p>los textos</p></li> 
-*/
 
-
-
-	
   }
 </script>
 
@@ -72,4 +63,5 @@ Lugar y hora: <input type="text" id="caja5" >
 <p id="codigo"></p>
 
 </body>
-</html>
+</html>	
+
