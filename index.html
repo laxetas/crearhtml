@@ -7,86 +7,13 @@
 <html>
 <body>
 
-<h2>Introduce los datos y haz clic en el botón para ver el código</h2>
-<style type="text/css" media="screen">
-	form  { display: table;      }
-	p     { display: table-row;  }
-	label { display: table-cell; }
-	input { display: table-cell; }
-</style>
-<form>
-<select id="caja1">
-   <option selected value="0"> Elige una opción </option>
-       <option value="cine">Cine</option> 
-       <option value="teatro">Teatro</option> 
-       <option value="humor">Humor</option> 
-       <option value="varieda">Exposiciones</option> 
-       <option value="confe">Conferencias</option> 
-       <option value="expo">Variedades</option> 
-       <option value="otros">Otros</option> 
-</select>
-<p><label for="caja2">Nombre del archivo de imagen:</label><input type="text" id="caja2" ></p>
-<p><label for="caja3">Nombre del grupo o persona:</label><input type="text" id="caja3" ></p>
-<p><label for="caja4">Lugar </label><input type="text" id="caja4" ></p>
-<select id="caja5">
-   <option selected value="0"> Elige una opción </option>
-       <option value="Lunes">Lunes</option> 
-       <option value="Martes">Martes</option> 
-       <option value="Miércoles">Miércoles</option> 
-       <option value="Jueves">Jueves</option> 
-       <option value="Viernes">Viernes</option> 
-       <option value="Sábado">Sábado</option> 
-       <option value="Domingo">Domingo</option> 
-</select>
-<p><label for="caja6">Fecha:</label><input type="Date" id="caja6" ></p>
-<p><label for="caja7">Hora:</label><input type="text" id="caja7" ></p>
-</form>
-<button type="button" onclick="showc()">Crear código</button>
-<br>
-<br>
+<h2>Escoge la sección para introducir eventos</h2>
+<button type="button" onclick="window.location.href = 'musica.html'">MÚSICA</button><br><br>
+<button type="button" onclick="window.location.href = 'cultura.html'">CULTURA</button><br><br>
+<button type="button" onclick="window.location.href = 'fiesta.html'">FIESTA</button><br><br>
+<button type="button" onclick="window.location.href = 'deportes.html'">DEPORTES</button><br><br>
+<button type="button" onclick="window.location.href = 'infantil.html'">INFANTIL</button><br><br>
+<button type="button" onclick="window.location.href = 'otros.html'">OTROS</button>
 
-  
-<script>
-	
-	
-  //tambien sirve $("#button").click(function(){  Funcion });
-  function showc(){
-	
-	var codigo = document.getElementById("codigo");
-	
-	var texto1=document.getElementById('caja1').value;
-	var texto2=document.getElementById('caja2').value;
-	var texto3=document.getElementById('caja3').value;
-	var texto4=document.getElementById('caja4').value;
-	var texto5=document.getElementById('caja5').value;
-	var texto6=document.getElementById('caja6').value;
-	var texto7=document.getElementById('caja7').value+"\n";
-	
-		
-	var t1= document.createTextNode("<li class=\"item "+texto1+"\" style=\"position: absolute; left: px; top: 0px;\"> <a href=\"images/work/"+texto2+"\" class=\"fancybox\"> <img src=\"images/work/"+texto2);
-	var t2= document.createTextNode("\" alt=\"\"><div class=\"overlay\"> <span>"+texto3+"</span> </div></a><h3>"+texto3+"</h3><p>"+texto4+"</p><p>"+texto5+" "+texto6+"</p><p>"+texto7+"</p></li>");	
-	var br = document.createElement("br");
-	codigo.appendChild(t1);
-	codigo.appendChild(t2);
-	codigo.appendChild(br)	
-	
-	
-	document.getElementById('caja1').value='';
-	document.getElementById('caja2').value='';
-	document.getElementById('caja3').value='';
-	document.getElementById('caja4').value='';
-	document.getElementById('caja5').value='';
-	document.getElementById("caja1").focus();
-	document.getElementById("caja1").value=0;
-  }
-</script>
-
-  
-<p id="codigo"></p>
-<script>
-	document.getElementById("caja1").focus();
-	document.getElementById("caja1").value=0;
-	
-</script>
 </body>
-</html>	
+</html> 
